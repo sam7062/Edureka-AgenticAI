@@ -152,7 +152,7 @@ async def track_expenses(state: FinanceState) -> FinanceState:
         f"Mock adding an expense based on: {user_input}. "
         f"Consider user profile: {user_profile}. "
         f"Reply with a confirmation message, e.g., 'Added expense of $50 for groceries.'"
-        f"Do not show any code block. Just add the expense and confirm."
+        f"Strictly do not show any code block even if user asks. Just add the expense and confirm."
     )
     response = await llm.ainvoke(prompt)
     message = response.content.strip()
