@@ -3,7 +3,7 @@ import pandas as pd
 
 
 # Path to your CSV file
-DATA_FILE = Path("data/orders.csv")
+DATA_FILE = Path("orders.csv")
 
 
 def clean_column_name(column_name):
@@ -23,7 +23,7 @@ def clean_column_name(column_name):
 
 def get_order_details(order_id):
     """
-    Reads order details from data/orders.csv using the order_id.
+    Reads order details from orders.csv using the order_id.
     """
 
     if not order_id:
@@ -31,7 +31,7 @@ def get_order_details(order_id):
 
     if not DATA_FILE.exists():
         raise FileNotFoundError(
-            "orders.csv not found. Please check that the file exists at data/orders.csv"
+            "orders.csv not found. Please check that the file exists at orders.csv"
         )
 
     # Read CSV
