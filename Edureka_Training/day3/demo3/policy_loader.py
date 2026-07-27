@@ -23,7 +23,8 @@ except ImportError:
 # -----------------------------
 # File Paths
 # -----------------------------
-POLICY_PDF_PATH = Path("policy_knowledge.pdf")
+BASE_DIR = Path(__file__).resolve().parent
+POLICY_PDF_PATH = BASE_DIR / "policy_knowledge.pdf"
 FAISS_INDEX_PATH = Path("vector_store/policy_faiss_index")
 
 
