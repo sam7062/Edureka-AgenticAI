@@ -2,8 +2,11 @@ from pathlib import Path
 import pandas as pd
 
 
-# Path to your CSV file
-DATA_FILE = Path("orders.csv")
+# Directory containing order_data.py
+BASE_DIR = Path(__file__).resolve().parent
+
+# Path to orders.csv
+DATA_FILE = BASE_DIR / "data" / "orders.csv"
 
 
 def clean_column_name(column_name):
